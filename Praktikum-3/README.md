@@ -1,6 +1,6 @@
 # PDA Flowchart Simulator (Pushdown Automata)
 
-### 👥 Kelompok B03
+### ▸ Kelompok B03
 *   **Anggota 1**: [Agil Lukman Hakim Muchdi] - [5025241037]
 *   **Anggota 2**: [Berwyn Rafif Alvaro] - [5025241029]
 *   **Anggota 3**: [Mahendra Agung Darmawan] - [5025241032]
@@ -8,11 +8,13 @@
 ---
 
 Aplikasi web *Single Page Application* (SPA) interaktif untuk mensimulasikan mesin **Pushdown Automata (PDA)** menggunakan model flowchart grafis (**READ / PUSH / POP**). Proyek ini dirancang secara khusus untuk memenuhi tugas **Praktikum 3 Otomata & Teori Bahasa**.
-Link : [https://darkdrago89.github.io/Praktikum3Otomata/](https://darkdrago89.github.io/Praktikum3Otomata/)
+
+web: https://darkdrago89.github.io/Praktikum3Otomata/
+github: https://github.com/BrrRafif/Praktikum-2/tree/main/Praktikum-3
 
 ---
 
-## 🌟 Fitur Utama
+## ▸ Fitur Utama
 
 1. **Simulator PDA Interaktif**:
    - **Visualisasi Pita Input (Tape)**: Melacak penunjuk pembacaan secara visual (karakter aktif membesar dan menyala keemasan, sedangkan karakter yang telah diproses menciut dan dicoret).
@@ -31,7 +33,7 @@ Link : [https://darkdrago89.github.io/Praktikum3Otomata/](https://darkdrago89.gi
 
 ---
 
-## 🛠️ Panduan Penggunaan Simulator
+## ▸ Panduan Penggunaan Simulator
 
 1. **Memilih Mesin (Template)**:
    - Di tab **Simulator**, klik menu drop-down di pojok kanan atas bertuliskan **Preset**.
@@ -47,7 +49,7 @@ Link : [https://darkdrago89.github.io/Praktikum3Otomata/](https://darkdrago89.gi
 
 ---
 
-## 📋 Template Mesin, Sampel, dan Analisis Teori
+## ▸ Template Mesin, Sampel, dan Analisis Teori
 
 Mesin PDA bekerja menggunakan kontrol state (flowchart) dengan bantuan memori tambahan berupa **Stack** yang diawali dengan simbol dasar awal `Z`.
 
@@ -56,7 +58,7 @@ Mesin ini mendeteksi string yang sama bila dibaca dari depan atau belakang, dipi
 *   **Contoh ACCEPT:** `abXba`
 *   **Contoh REJECT:** `abXab`
 
-#### 🔬 Analisis Dasar Teori Keanggotaan:
+#### Analisis Dasar Teori Keanggotaan:
 *   **Kenapa `abXba` di-ACCEPT?**
     1. Mesin mulai di state `START`, stack berisi `['Z']`.
     2. Bagian pertama sebelum `X` dibaca (`a` lalu `b`). Setiap karakter input dimasukkan ke stack (**PUSH**): stack menjadi `['Z', 'a', 'b']`.
@@ -78,7 +80,7 @@ Mesin untuk mencocokkan jumlah karakter `a` di awal dengan jumlah karakter `b` s
 *   **Contoh ACCEPT:** `aaabbb` (jumlah `a` = 3, `b` = 3)
 *   **Contoh REJECT:** `aabbb` (jumlah `a` = 2, `b` = 3)
 
-#### 🔬 Analisis Dasar Teori Keanggotaan:
+#### Analisis Dasar Teori Keanggotaan:
 *   **Kenapa `aaabbb` di-ACCEPT?**
     1. Setiap kali membaca `a` di fase pertama, mesin melakukan **PUSH A** ke stack. Karena ada tiga `a`, stack menjadi `['Z', 'A', 'A', 'A']`.
     2. Saat membaca `b` pertama, mesin berpindah ke fase pengosongan dan melakukan **POP A** (stack menjadi `['Z', 'A', 'A']`).
@@ -97,7 +99,7 @@ Memastikan setiap kurung buka `(` memiliki pasangan kurung tutup `)` yang menutu
 *   **Contoh ACCEPT:** `(())`
 *   **Contoh REJECT:** `(()`
 
-#### 🔬 Analisis Dasar Teori Keanggotaan:
+#### Analisis Dasar Teori Keanggotaan:
 *   **Kenapa `(())` di-ACCEPT?**
     1. Membaca `(` pertama ➔ **PUSH P** (stack: `['Z', 'P']`).
     2. Membaca `(` kedua ➔ **PUSH P** (stack: `['Z', 'P', 'P']`).
@@ -112,7 +114,7 @@ Memastikan setiap kurung buka `(` memiliki pasangan kurung tutup `)` yang menutu
 ---
 
 
-## 🎨 Teknologi & Desain Sistem
+## ▸ Teknologi & Desain Sistem
 
 - **Struktur & Logika**: HTML5 & Javascript vanilla (ES6).
 - **Rendering Grafis**: HTML5 Canvas API dengan dynamic DPR (Device Pixel Ratio) scaling agar teks dan garis tetap tajam pada layar resolusi tinggi (Retina/4K).
